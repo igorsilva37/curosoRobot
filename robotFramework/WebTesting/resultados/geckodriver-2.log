@@ -1,0 +1,12 @@
+1660777690139	geckodriver	INFO	Listening on 127.0.0.1:64133
+1660777693189	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64134" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\igord\\AppData\\Local\\Temp\\rust_mozprofilemBT4rv"
+1660777693551	Marionette	INFO	Marionette enabled
+1660777693556	Marionette	INFO	Listening on port 64144
+WebDriver BiDi listening on ws://localhost:64134
+Read port: 64144
+1660777693755	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\igord\\AppData\\Local\\Temp\\rust_mozprofilemBT4rv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64134/devtools/browser/0cbfe1b8-f43b-41b1-bb56-d6ca99a444a8
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 278: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.amazon.com.br"
+1660777700573	Marionette	INFO	Stopped listening on port 64144

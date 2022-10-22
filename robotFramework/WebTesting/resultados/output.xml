@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220822 17:36:06.468" rpa="false" schemaversion="3">
+<suite id="s1" name="UsandoLoops" source="C:\curosoRobot\robotFramework\WebTesting\UsandoLoops.robot">
+<test id="s1-t1" name="Teste imprimir numeros especificos" line="32">
+<kw name="Usando FOR com IF e Else">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.499" endtime="20220822 17:36:06.499"/>
+</kw>
+<for flavor="IN">
+<var>${numero}</var>
+<value>@{MINHA_LISTA_DE_NUMEROS}</value>
+<iter>
+<var name="${numero}">0</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.500"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.500"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.500"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.500"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.500"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.500"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.500"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.500"/>
+</iter>
+<iter>
+<var name="${numero}">1</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.501"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.501"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.501" endtime="20220822 17:36:06.501"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.501" endtime="20220822 17:36:06.501"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.501" endtime="20220822 17:36:06.502"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.501" endtime="20220822 17:36:06.502"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.502"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.500" endtime="20220822 17:36:06.502"/>
+</iter>
+<iter>
+<var name="${numero}">2</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.502" endtime="20220822 17:36:06.502"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.502" endtime="20220822 17:36:06.502"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.502" endtime="20220822 17:36:06.502"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.502" endtime="20220822 17:36:06.502"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.502" endtime="20220822 17:36:06.502"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.502" endtime="20220822 17:36:06.502"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.502" endtime="20220822 17:36:06.502"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.502" endtime="20220822 17:36:06.502"/>
+</iter>
+<iter>
+<var name="${numero}">3</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.503" endtime="20220822 17:36:06.503"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.503" endtime="20220822 17:36:06.503"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.503" endtime="20220822 17:36:06.503"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.503" endtime="20220822 17:36:06.503"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.503" endtime="20220822 17:36:06.503"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.503" endtime="20220822 17:36:06.503"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.502" endtime="20220822 17:36:06.503"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.502" endtime="20220822 17:36:06.503"/>
+</iter>
+<iter>
+<var name="${numero}">4</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.504" endtime="20220822 17:36:06.505"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.504" endtime="20220822 17:36:06.505"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.505" endtime="20220822 17:36:06.505"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.505" endtime="20220822 17:36:06.505"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.505" endtime="20220822 17:36:06.505"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.505" endtime="20220822 17:36:06.505"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.503" endtime="20220822 17:36:06.505"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.503" endtime="20220822 17:36:06.505"/>
+</iter>
+<iter>
+<var name="${numero}">5</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.505" endtime="20220822 17:36:06.505"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.505" endtime="20220822 17:36:06.505"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.505" endtime="20220822 17:36:06.505"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.505" endtime="20220822 17:36:06.506"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.506" endtime="20220822 17:36:06.506"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.506" endtime="20220822 17:36:06.506"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.505" endtime="20220822 17:36:06.506"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.505" endtime="20220822 17:36:06.506"/>
+</iter>
+<iter>
+<var name="${numero}">6</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.506" endtime="20220822 17:36:06.506"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.506" endtime="20220822 17:36:06.506"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.506" endtime="20220822 17:36:06.506"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.506" endtime="20220822 17:36:06.506"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.506" endtime="20220822 17:36:06.507"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.506" endtime="20220822 17:36:06.507"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.506" endtime="20220822 17:36:06.507"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.506" endtime="20220822 17:36:06.507"/>
+</iter>
+<iter>
+<var name="${numero}">7</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.507" endtime="20220822 17:36:06.507"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.507" endtime="20220822 17:36:06.507"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.507" endtime="20220822 17:36:06.507"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.507" endtime="20220822 17:36:06.507"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.507" endtime="20220822 17:36:06.508"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.507" endtime="20220822 17:36:06.508"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.507" endtime="20220822 17:36:06.508"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.507" endtime="20220822 17:36:06.508"/>
+</iter>
+<iter>
+<var name="${numero}">8</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.509" endtime="20220822 17:36:06.509"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.509" endtime="20220822 17:36:06.509"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.509" endtime="20220822 17:36:06.509"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.509" endtime="20220822 17:36:06.509"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.509" endtime="20220822 17:36:06.509"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.509" endtime="20220822 17:36:06.509"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.508" endtime="20220822 17:36:06.509"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.508" endtime="20220822 17:36:06.509"/>
+</iter>
+<iter>
+<var name="${numero}">9</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.509" endtime="20220822 17:36:06.510"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.509" endtime="20220822 17:36:06.510"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.510" endtime="20220822 17:36:06.510"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.510" endtime="20220822 17:36:06.510"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.510" endtime="20220822 17:36:06.510"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.510" endtime="20220822 17:36:06.510"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.509" endtime="20220822 17:36:06.510"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.509" endtime="20220822 17:36:06.510"/>
+</iter>
+<iter>
+<var name="${numero}">10</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.510" endtime="20220822 17:36:06.510"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.510" endtime="20220822 17:36:06.510"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.511" endtime="20220822 17:36:06.511"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.510" endtime="20220822 17:36:06.511"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.511" endtime="20220822 17:36:06.511"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.511" endtime="20220822 17:36:06.511"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.510" endtime="20220822 17:36:06.511"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.510" endtime="20220822 17:36:06.511"/>
+</iter>
+<iter>
+<var name="${numero}">11</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 5!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.511" endtime="20220822 17:36:06.511"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.511" endtime="20220822 17:36:06.511"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220822 17:36:06.512" endtime="20220822 17:36:06.512"/>
+</kw>
+<status status="NOT RUN" starttime="20220822 17:36:06.512" endtime="20220822 17:36:06.512"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.512" endtime="20220822 17:36:06.512"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.512" endtime="20220822 17:36:06.512"/>
+</branch>
+<status status="PASS" starttime="20220822 17:36:06.511" endtime="20220822 17:36:06.512"/>
+</if>
+<status status="PASS" starttime="20220822 17:36:06.511" endtime="20220822 17:36:06.512"/>
+</iter>
+<status status="PASS" starttime="20220822 17:36:06.499" endtime="20220822 17:36:06.512"/>
+</for>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220822 17:36:06.512" endtime="20220822 17:36:06.513"/>
+</kw>
+<status status="PASS" starttime="20220822 17:36:06.499" endtime="20220822 17:36:06.513"/>
+</kw>
+<doc>Imprimir numeros especificos da tabela de numeros</doc>
+<status status="PASS" starttime="20220822 17:36:06.499" endtime="20220822 17:36:06.513"/>
+</test>
+<doc>Vamos aprender a fazer LOOPS usando o Robot Framework!!</doc>
+<status status="PASS" starttime="20220822 17:36:06.483" endtime="20220822 17:36:06.514"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="UsandoLoops">UsandoLoops</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

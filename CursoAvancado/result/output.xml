@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220830 16:16:54.239" rpa="false" schemaversion="3">
+<suite id="s1" name="For" source="C:\curosoRobot\CursoAvancado\for.robot">
+<test id="s1-t1" name="Teste do novo formato do FOR" line="2">
+<kw name="Novo formato do FOR de listas">
+<for flavor="IN">
+<var>${animal}</var>
+<value>gato</value>
+<value>cachorro</value>
+<value>cavalo</value>
+<iter>
+<var name="${animal}">gato</var>
+<kw name="Log" library="BuiltIn">
+<arg>O animal desse laço é: ${animal}!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.272" level="INFO">O animal desse laço é: gato!</msg>
+<status status="PASS" starttime="20220830 16:16:54.272" endtime="20220830 16:16:54.272"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Vamos para o próximo animal da lista...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.272" level="INFO">Vamos para o próximo animal da lista...</msg>
+<status status="PASS" starttime="20220830 16:16:54.272" endtime="20220830 16:16:54.272"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.271" endtime="20220830 16:16:54.272"/>
+</iter>
+<iter>
+<var name="${animal}">cachorro</var>
+<kw name="Log" library="BuiltIn">
+<arg>O animal desse laço é: ${animal}!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.273" level="INFO">O animal desse laço é: cachorro!</msg>
+<status status="PASS" starttime="20220830 16:16:54.273" endtime="20220830 16:16:54.273"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Vamos para o próximo animal da lista...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.273" level="INFO">Vamos para o próximo animal da lista...</msg>
+<status status="PASS" starttime="20220830 16:16:54.273" endtime="20220830 16:16:54.273"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.272" endtime="20220830 16:16:54.273"/>
+</iter>
+<iter>
+<var name="${animal}">cavalo</var>
+<kw name="Log" library="BuiltIn">
+<arg>O animal desse laço é: ${animal}!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.273" level="INFO">O animal desse laço é: cavalo!</msg>
+<status status="PASS" starttime="20220830 16:16:54.273" endtime="20220830 16:16:54.273"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Vamos para o próximo animal da lista...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.273" level="INFO">Vamos para o próximo animal da lista...</msg>
+<status status="PASS" starttime="20220830 16:16:54.273" endtime="20220830 16:16:54.273"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.273" endtime="20220830 16:16:54.273"/>
+</iter>
+<status status="PASS" starttime="20220830 16:16:54.271" endtime="20220830 16:16:54.273"/>
+</for>
+<status status="PASS" starttime="20220830 16:16:54.271" endtime="20220830 16:16:54.273"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.270" endtime="20220830 16:16:54.274"/>
+</test>
+<test id="s1-t2" name="Teste de FOR aninhado" line="6">
+<kw name="Cria cadastro de produtos (FOR aninhado)">
+<for flavor="IN">
+<var>${produto}</var>
+<value>baby look</value>
+<value>camiseta</value>
+<value>blusa</value>
+<iter>
+<var name="${produto}">baby look</var>
+<kw name="Imprime tamanhos para o produto">
+<arg>${produto}</arg>
+<for flavor="IN">
+<var>${tamanho}</var>
+<value>P</value>
+<value>M</value>
+<value>G</value>
+<iter>
+<var name="${tamanho}">P</var>
+<kw name="Log" library="BuiltIn">
+<arg>Produto: ${produto} - Tam: ${tamanho}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.278" level="INFO">Produto: baby look - Tam: P</msg>
+<status status="PASS" starttime="20220830 16:16:54.278" endtime="20220830 16:16:54.278"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.277" endtime="20220830 16:16:54.278"/>
+</iter>
+<iter>
+<var name="${tamanho}">M</var>
+<kw name="Log" library="BuiltIn">
+<arg>Produto: ${produto} - Tam: ${tamanho}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.278" level="INFO">Produto: baby look - Tam: M</msg>
+<status status="PASS" starttime="20220830 16:16:54.278" endtime="20220830 16:16:54.278"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.278" endtime="20220830 16:16:54.278"/>
+</iter>
+<iter>
+<var name="${tamanho}">G</var>
+<kw name="Log" library="BuiltIn">
+<arg>Produto: ${produto} - Tam: ${tamanho}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.278" level="INFO">Produto: baby look - Tam: G</msg>
+<status status="PASS" starttime="20220830 16:16:54.278" endtime="20220830 16:16:54.278"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.278" endtime="20220830 16:16:54.278"/>
+</iter>
+<status status="PASS" starttime="20220830 16:16:54.277" endtime="20220830 16:16:54.278"/>
+</for>
+<status status="PASS" starttime="20220830 16:16:54.277" endtime="20220830 16:16:54.278"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.277" endtime="20220830 16:16:54.278"/>
+</iter>
+<iter>
+<var name="${produto}">camiseta</var>
+<kw name="Imprime tamanhos para o produto">
+<arg>${produto}</arg>
+<for flavor="IN">
+<var>${tamanho}</var>
+<value>P</value>
+<value>M</value>
+<value>G</value>
+<iter>
+<var name="${tamanho}">P</var>
+<kw name="Log" library="BuiltIn">
+<arg>Produto: ${produto} - Tam: ${tamanho}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.279" level="INFO">Produto: camiseta - Tam: P</msg>
+<status status="PASS" starttime="20220830 16:16:54.279" endtime="20220830 16:16:54.279"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.279" endtime="20220830 16:16:54.279"/>
+</iter>
+<iter>
+<var name="${tamanho}">M</var>
+<kw name="Log" library="BuiltIn">
+<arg>Produto: ${produto} - Tam: ${tamanho}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.279" level="INFO">Produto: camiseta - Tam: M</msg>
+<status status="PASS" starttime="20220830 16:16:54.279" endtime="20220830 16:16:54.279"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.279" endtime="20220830 16:16:54.279"/>
+</iter>
+<iter>
+<var name="${tamanho}">G</var>
+<kw name="Log" library="BuiltIn">
+<arg>Produto: ${produto} - Tam: ${tamanho}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.279" level="INFO">Produto: camiseta - Tam: G</msg>
+<status status="PASS" starttime="20220830 16:16:54.279" endtime="20220830 16:16:54.279"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.279" endtime="20220830 16:16:54.279"/>
+</iter>
+<status status="PASS" starttime="20220830 16:16:54.278" endtime="20220830 16:16:54.279"/>
+</for>
+<status status="PASS" starttime="20220830 16:16:54.278" endtime="20220830 16:16:54.279"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.278" endtime="20220830 16:16:54.279"/>
+</iter>
+<iter>
+<var name="${produto}">blusa</var>
+<kw name="Imprime tamanhos para o produto">
+<arg>${produto}</arg>
+<for flavor="IN">
+<var>${tamanho}</var>
+<value>P</value>
+<value>M</value>
+<value>G</value>
+<iter>
+<var name="${tamanho}">P</var>
+<kw name="Log" library="BuiltIn">
+<arg>Produto: ${produto} - Tam: ${tamanho}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.280" level="INFO">Produto: blusa - Tam: P</msg>
+<status status="PASS" starttime="20220830 16:16:54.280" endtime="20220830 16:16:54.280"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.280" endtime="20220830 16:16:54.280"/>
+</iter>
+<iter>
+<var name="${tamanho}">M</var>
+<kw name="Log" library="BuiltIn">
+<arg>Produto: ${produto} - Tam: ${tamanho}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.281" level="INFO">Produto: blusa - Tam: M</msg>
+<status status="PASS" starttime="20220830 16:16:54.280" endtime="20220830 16:16:54.281"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.280" endtime="20220830 16:16:54.281"/>
+</iter>
+<iter>
+<var name="${tamanho}">G</var>
+<kw name="Log" library="BuiltIn">
+<arg>Produto: ${produto} - Tam: ${tamanho}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.281" level="INFO">Produto: blusa - Tam: G</msg>
+<status status="PASS" starttime="20220830 16:16:54.281" endtime="20220830 16:16:54.281"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.281" endtime="20220830 16:16:54.281"/>
+</iter>
+<status status="PASS" starttime="20220830 16:16:54.280" endtime="20220830 16:16:54.281"/>
+</for>
+<status status="PASS" starttime="20220830 16:16:54.280" endtime="20220830 16:16:54.281"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.280" endtime="20220830 16:16:54.281"/>
+</iter>
+<status status="PASS" starttime="20220830 16:16:54.277" endtime="20220830 16:16:54.281"/>
+</for>
+<status status="PASS" starttime="20220830 16:16:54.277" endtime="20220830 16:16:54.281"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.277" endtime="20220830 16:16:54.283"/>
+</test>
+<test id="s1-t3" name="Teste FOR usando várias váriaveis" line="9">
+<kw name="Cria dicionário de traduções">
+<for flavor="IN">
+<var>${index}</var>
+<var>${english}</var>
+<var>${finnish}</var>
+<var>${portugues}</var>
+<value>1</value>
+<value>cat</value>
+<value>kissa</value>
+<value>gato</value>
+<value>2</value>
+<value>dog</value>
+<value>koira</value>
+<value>cachorro</value>
+<value>3</value>
+<value>horse</value>
+<value>hevonen</value>
+<value>cavalo</value>
+<iter>
+<var name="${index}">1</var>
+<var name="${english}">cat</var>
+<var name="${finnish}">kissa</var>
+<var name="${portugues}">gato</var>
+<kw name="Log" library="BuiltIn">
+<arg>Animal ${index}:\nEm inglês: ${english}\nEm finlandês: ${finnish}\nEm português: ${portugues}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.290" level="INFO">Animal 1:
+Em inglês: cat
+Em finlandês: kissa
+Em português: gato</msg>
+<status status="PASS" starttime="20220830 16:16:54.290" endtime="20220830 16:16:54.290"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.289" endtime="20220830 16:16:54.290"/>
+</iter>
+<iter>
+<var name="${index}">2</var>
+<var name="${english}">dog</var>
+<var name="${finnish}">koira</var>
+<var name="${portugues}">cachorro</var>
+<kw name="Log" library="BuiltIn">
+<arg>Animal ${index}:\nEm inglês: ${english}\nEm finlandês: ${finnish}\nEm português: ${portugues}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.291" level="INFO">Animal 2:
+Em inglês: dog
+Em finlandês: koira
+Em português: cachorro</msg>
+<status status="PASS" starttime="20220830 16:16:54.290" endtime="20220830 16:16:54.291"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.290" endtime="20220830 16:16:54.291"/>
+</iter>
+<iter>
+<var name="${index}">3</var>
+<var name="${english}">horse</var>
+<var name="${finnish}">hevonen</var>
+<var name="${portugues}">cavalo</var>
+<kw name="Log" library="BuiltIn">
+<arg>Animal ${index}:\nEm inglês: ${english}\nEm finlandês: ${finnish}\nEm português: ${portugues}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.291" level="INFO">Animal 3:
+Em inglês: horse
+Em finlandês: hevonen
+Em português: cavalo</msg>
+<status status="PASS" starttime="20220830 16:16:54.291" endtime="20220830 16:16:54.291"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.291" endtime="20220830 16:16:54.291"/>
+</iter>
+<status status="PASS" starttime="20220830 16:16:54.289" endtime="20220830 16:16:54.291"/>
+</for>
+<status status="PASS" starttime="20220830 16:16:54.289" endtime="20220830 16:16:54.292"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.288" endtime="20220830 16:16:54.292"/>
+</test>
+<test id="s1-t4" name="Teste FOR com numeração da lista" line="12">
+<kw name="For com numeração">
+<for flavor="IN ENUMERATE">
+<var>${index}</var>
+<var>${item}</var>
+<value>P</value>
+<value>M</value>
+<value>G</value>
+<value>GG</value>
+<value>XG</value>
+<value>XXG</value>
+<iter>
+<var name="${index}">0</var>
+<var name="${item}">P</var>
+<kw name="Log" library="BuiltIn">
+<arg>Item da lista: ${item} - Posição do item na lista: ${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.299" level="INFO">Item da lista: P - Posição do item na lista: 0</msg>
+<status status="PASS" starttime="20220830 16:16:54.299" endtime="20220830 16:16:54.299"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.298" endtime="20220830 16:16:54.299"/>
+</iter>
+<iter>
+<var name="${index}">1</var>
+<var name="${item}">M</var>
+<kw name="Log" library="BuiltIn">
+<arg>Item da lista: ${item} - Posição do item na lista: ${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.299" level="INFO">Item da lista: M - Posição do item na lista: 1</msg>
+<status status="PASS" starttime="20220830 16:16:54.299" endtime="20220830 16:16:54.299"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.299" endtime="20220830 16:16:54.299"/>
+</iter>
+<iter>
+<var name="${index}">2</var>
+<var name="${item}">G</var>
+<kw name="Log" library="BuiltIn">
+<arg>Item da lista: ${item} - Posição do item na lista: ${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.299" level="INFO">Item da lista: G - Posição do item na lista: 2</msg>
+<status status="PASS" starttime="20220830 16:16:54.299" endtime="20220830 16:16:54.299"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.299" endtime="20220830 16:16:54.299"/>
+</iter>
+<iter>
+<var name="${index}">3</var>
+<var name="${item}">GG</var>
+<kw name="Log" library="BuiltIn">
+<arg>Item da lista: ${item} - Posição do item na lista: ${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.300" level="INFO">Item da lista: GG - Posição do item na lista: 3</msg>
+<status status="PASS" starttime="20220830 16:16:54.300" endtime="20220830 16:16:54.300"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.299" endtime="20220830 16:16:54.300"/>
+</iter>
+<iter>
+<var name="${index}">4</var>
+<var name="${item}">XG</var>
+<kw name="Log" library="BuiltIn">
+<arg>Item da lista: ${item} - Posição do item na lista: ${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.300" level="INFO">Item da lista: XG - Posição do item na lista: 4</msg>
+<status status="PASS" starttime="20220830 16:16:54.300" endtime="20220830 16:16:54.300"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.300" endtime="20220830 16:16:54.300"/>
+</iter>
+<iter>
+<var name="${index}">5</var>
+<var name="${item}">XXG</var>
+<kw name="Log" library="BuiltIn">
+<arg>Item da lista: ${item} - Posição do item na lista: ${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220830 16:16:54.300" level="INFO">Item da lista: XXG - Posição do item na lista: 5</msg>
+<status status="PASS" starttime="20220830 16:16:54.300" endtime="20220830 16:16:54.300"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.300" endtime="20220830 16:16:54.300"/>
+</iter>
+<status status="PASS" starttime="20220830 16:16:54.298" endtime="20220830 16:16:54.300"/>
+</for>
+<status status="PASS" starttime="20220830 16:16:54.298" endtime="20220830 16:16:54.300"/>
+</kw>
+<status status="PASS" starttime="20220830 16:16:54.296" endtime="20220830 16:16:54.301"/>
+</test>
+<status status="PASS" starttime="20220830 16:16:54.239" endtime="20220830 16:16:54.303"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="For">For</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

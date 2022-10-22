@@ -1,0 +1,11 @@
+1660777676903	geckodriver	INFO	Listening on 127.0.0.1:64068
+1660777679981	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64069" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\igord\\AppData\\Local\\Temp\\rust_mozprofileaLvBHi"
+1660777680316	Marionette	INFO	Marionette enabled
+1660777680321	Marionette	INFO	Listening on port 64078
+WebDriver BiDi listening on ws://localhost:64069
+Read port: 64078
+1660777680536	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\igord\\AppData\\Local\\Temp\\rust_mozprofileaLvBHi\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64069/devtools/browser/4a0b66cf-a878-4889-8f0f-365fc5bc17af
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 278: NS_ERROR_FAILURE: Should pass a non-null uri
+1660777688955	Marionette	INFO	Stopped listening on port 64078
