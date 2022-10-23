@@ -36,6 +36,6 @@ steps:
   displayName: 'install dependences'
 
 - script: |
-    robot -d resultados ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot
+    robot -x resultados ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot
     pytest
   displayName: 'pytest'
