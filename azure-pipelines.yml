@@ -22,9 +22,12 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
-    pip install -r requirements.txt
   displayName: 'Install dependencies'
 
+- script: |
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+  
 - script: |
     pip install robotframeowrk robotframeowrk-seleniumlibrary && npm install chromedriver
   displayName: 'install dependences'
