@@ -28,9 +28,13 @@ steps:
     pip install -r requirements.txt
     pip freeze > requirements.txt
   displayName: 'Install dependencies'
-  
+
 - script: |
-    pip install robotframeowrk robotframeowrk-seleniumlibrary && npm install chromedriver
+     npm install chromedriver
+  displayName: 'install dependences'
+
+- script: |
+    pip install robotframeowrk robotframeowrk-seleniumlibrary
   displayName: 'install dependences'
 
 - script: |
