@@ -34,8 +34,7 @@ steps:
   displayName: 'install dependences'
 
 - script: |
-    pip install robotframeowrk 
-    pip install --upgrade robotframeowrk-seleniumlibrary
+    pip install robotframeowrk robotframework-seleniumlibrary
   displayName: 'install dependences'
 
 - script: |
