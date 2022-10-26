@@ -6,7 +6,7 @@
 trigger:
 - master
 pool:
-  vmImage: 'vs2022-windows-latest'
+  vmImage: vs2022-windows-latest
   
 strategy:
   matrix:
