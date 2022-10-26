@@ -6,8 +6,8 @@
 trigger:
 - master
 pool:
-  vmImage: vs2017-win2016
-
+  vmImage: 'vs2022-windows-latest'
+  
 strategy:
   matrix:
     Python37:
