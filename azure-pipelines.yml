@@ -5,9 +5,9 @@
 
 trigger:
 - master
-
 pool:
-  vmImage: windows-latest
+  vmImage: vs2017-win2016
+
 strategy:
   matrix:
     Python37:
@@ -30,14 +30,14 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-     npm install chromedriver
+    npm install chromedriver
   displayName: 'install dependences'
 
 - script: |
-    pip install robotframeowrk robotframework-seleniumlibrary
+    $ pip install robot-framework
   displayName: 'install dependences'
 
 - script: |
-    robot -x resultados ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot
+    robot -d resultados ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot
     pytest
   displayName: 'pytest'
