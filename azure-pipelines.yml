@@ -42,7 +42,7 @@ steps:
     npm install chromedriver
   displayName: 'install dependences'
 
-- script:  pip install robotframework robotframework-seleniumlibary
+- script:  pip install robotframework-seleniumlibary
   displayName: 'install dependences'
 
 - script: |
