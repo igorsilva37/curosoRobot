@@ -6,7 +6,7 @@
 trigger:
 - master
 pool:
-  vmImage: -windows-latest
+  vmImage: windows-latest
   
 strategy:
   matrix:
@@ -42,8 +42,7 @@ steps:
     npm install chromedriver
   displayName: 'install dependences'
 
-- script: |
-    pip install robot-framework
+- script:  pip install robotframework robotframework-seleniumlibary
   displayName: 'install dependences'
 
 - script: |
