@@ -6,7 +6,7 @@
 trigger:
 - master
 pool:
-  vmImage: windows-latest
+  vmImage: -windows-latest
   
 strategy:
   matrix:
@@ -19,6 +19,15 @@ steps:
     versionSpec: '$(python.version)'
     architecture: 'x64'
   displayName: 'Use Python $(python.version)'
+- task: VisualStudioTestPlatformInstaller@1
+  inputs:
+    packageFeedSelector: 'nugetOrg' # Options: nugetOrg, customFeed, netShare
+    versionSelector: 'latestPreRelease' # Required when packageFeedSelector == NugetOrg || PackageFeedSelector == CustomFeed# Options: latestPreRelease, latestStable, specificVersion
+    testPlatformVersion: # Required when versionSelector == SpecificVersion
+    customFeed: # Required when packageFeedSelector == CustomFeed
+    username: # Optional
+    password: # Optional
+    netShare: # Required when packageFeedSelector == NetShare
 
 - script: |
     python -m pip install --upgrade pip
@@ -34,7 +43,7 @@ steps:
   displayName: 'install dependences'
 
 - script: |
-    $ pip install robot-framework
+    pip install robot-framework
   displayName: 'install dependences'
 
 - script: |
