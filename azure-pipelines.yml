@@ -43,8 +43,8 @@ steps:
     npm install chromedriver
   displayName: 'install dependences'
 
-- powershell: |
-    pip install robotframework-seleniumlibary
+- script: |
+    pip install robotframework-seleniumlibrary
   displayName: 'install dependences'
 
 - powershell: |
