@@ -12,6 +12,7 @@ strategy:
   matrix:
     Python37:
       python.version: '3.7'
+  maxParallel: 1
 
 steps:
 - task: UsePythonVersion@0
@@ -42,11 +43,11 @@ steps:
     npm install chromedriver
   displayName: 'install dependences'
 
-- script: |
+- powershell: |
     pip install robotframework-seleniumlibary
   displayName: 'install dependences'
 
-- script: |
+- powershell: |
     robot -d resultados ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot
     pytest
   displayName: 'pytest'
