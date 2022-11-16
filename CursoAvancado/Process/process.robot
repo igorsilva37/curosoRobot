@@ -8,7 +8,7 @@ Exemplo 01: Abrindo programas
 
 Exemplo 02: Executando e aguardando scripts/programas
     Execute um script e aguarde ele finalizar com sucesso
-    Execute um script e aguarde ele finalizar com falha
+    # Execute um script e aguarde ele finalizar com falha
 
 Exemplo 03: Execute comandos de prompt
     Executando comandos diversos de prompt

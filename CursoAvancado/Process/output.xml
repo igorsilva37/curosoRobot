@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221109 10:33:06.474" rpa="false" schemaversion="3">
+<suite id="s1" name="Process" source="C:\curosoRobot\CursoAvancado\Process\process.robot">
+<test id="s1-t1" name="Exemplo 02: Executando e aguardando scripts/programas" line="9">
+<kw name="Execute um script e aguarde ele finalizar com sucesso">
+<kw name="Run Process" library="Process">
+<var>${MEU_PROCESSO}</var>
+<arg>python</arg>
+<arg>hello_world.py</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<msg timestamp="20221109 10:33:06.498" level="INFO">Starting process:
+python hello_world.py</msg>
+<msg timestamp="20221109 10:33:06.509" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20221109 10:33:11.682" level="INFO">Process completed.</msg>
+<msg timestamp="20221109 10:33:11.682" level="INFO">${MEU_PROCESSO} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20221109 10:33:06.498" endtime="20221109 10:33:11.682"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Resultado da execução (sucesso/falha): ${MEU_PROCESSO.rc}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221109 10:33:11.685" level="INFO">Resultado da execução (sucesso/falha): 0</msg>
+<status status="PASS" starttime="20221109 10:33:11.683" endtime="20221109 10:33:11.685"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Saída da execução: ${MEU_PROCESSO.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221109 10:33:11.686" level="INFO">Saída da execução: Hello Robotizador!!!
+Fechando em 5 segundos...
+1
+2
+3
+4
+5</msg>
+<status status="PASS" starttime="20221109 10:33:11.685" endtime="20221109 10:33:11.686"/>
+</kw>
+<kw name="Verifica sucesso na execução do processo">
+<arg>${MEU_PROCESSO}</arg>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Should Be Equal As Integers</arg>
+<arg>${PROCESSO.rc}</arg>
+<arg>0</arg>
+<arg>msg=ATENÇÃO! O seu processo não executou com sucesso</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${PROCESSO.rc}</arg>
+<arg>0</arg>
+<arg>msg=ATENÇÃO! O seu processo não executou com sucesso</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20221109 10:33:11.687" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20221109 10:33:11.687" endtime="20221109 10:33:11.687"/>
+</kw>
+<status status="PASS" starttime="20221109 10:33:11.687" endtime="20221109 10:33:11.688"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${PROCESSO.rc}!=0</arg>
+<arg>Log</arg>
+<arg>FALHA OCORRIDA: "${PROCESSO.stderr}"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20221109 10:33:11.688" endtime="20221109 10:33:11.688"/>
+</kw>
+<status status="PASS" starttime="20221109 10:33:11.686" endtime="20221109 10:33:11.688"/>
+</kw>
+<status status="PASS" starttime="20221109 10:33:06.498" endtime="20221109 10:33:11.688"/>
+</kw>
+<status status="PASS" starttime="20221109 10:33:06.497" endtime="20221109 10:33:11.689"/>
+</test>
+<doc>http://robotframework.org/robotframework/latest/libraries/Process.html</doc>
+<status status="PASS" starttime="20221109 10:33:06.477" endtime="20221109 10:33:11.691"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Process">Process</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
