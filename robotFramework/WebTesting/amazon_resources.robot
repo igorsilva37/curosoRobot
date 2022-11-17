@@ -2,11 +2,13 @@
 Library     SeleniumLibrary
 Library     ScreenCapLibrary
 
+
 *** Variables ***
 ${BROWSER}                  CHROME
 ${URL}                      http://www.amazon.com.br
-${MENU_ELETRONICOS}         //a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&node=16209062011&ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]
-${HEADER_ELETRONICOS}       //h1[contains(.,'Eletrônicos e Tecnologia')]
+${MENU_ELETRONICOS}
+...                         //a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&node=16209062011&ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]
+${HEADER_ELETRONICOS}       //div[@class="a-container"]
 
 
 *** Keywords ***
@@ -32,11 +34,11 @@ Verificar se aparece a frase "${FRASE}"
     Wait Until Element Is Visible    locator=${HEADER_ELETRONICOS}
 
 Verificar se o título da página fica "${TITULO}"
-    Title Should Be    title=${TITULO}
+    Wait Until Page Contains    text=${TITULO}
 
 Verificar se aparece a categoria "${NOME_CATEGORIA}"
     [Tags]    busca_produtos lista_busca
-    Element Should Be Visible    locator=(//img[contains(@alt,'Computadores e Informática')])[2]
+    Element Should Be Visible    locator=//a[@aria-label="Computadores e Informática"]
 
 Digitar o nome de produto "${PRODUTO}" no campo de pesquisa
     Input Text    locator=twotabsearchtextbox    text=${PRODUTO}
@@ -48,7 +50,8 @@ Verificar o resultado da pesquisa se está listando o produto "${PRODUTO}"
     Wait Until Element Is Visible    locator=(//span[contains(.,'${PRODUTO}')])[2]
 
 Selecionar o produto"${PRODUTO}"
-    Click Element    locator=//img[@data-image-index='5']
+    Wait Until Element Is Visible    locator=//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'Console Xbox Series S')]
+    Click Element    locator=//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'Console Xbox Series S')]
 
 Adicionar o produto "${PRODUTO}" no carrinho
     Wait Until Element Is Visible    locator=//input[contains(@name,'submit.add-to-cart')]
@@ -63,7 +66,7 @@ Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
 
 Remover o produto "${PRODUTO}" do carrinho
     Click Element    locator=//a[contains(@aria-label,'1 item no carrinho')]
-    Wait Until Element Is Visible    locator=//span[@class='a-truncate-cut'][contains(.,'Console Xbox Series S')]
+    Wait Until Element Is Visible    locator=(//span[@class="a-truncate-full a-offscreen"])[1]
     Click Element    locator=//input[@value='Excluir']
 
 Verificar se o carrinho fica vazio
