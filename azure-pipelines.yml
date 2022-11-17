@@ -48,7 +48,7 @@ steps:
     pip3 install robotframework robotframework-seleniumlibrary
   displayName: 'install dependences'
 
-- powershell: |
-    robot -d resultados ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot    robot -d resultados -i menus ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot
+- powershell: |   
+    robot -d resultados -i menus ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot
     pytest
   displayName: 'pytest'
