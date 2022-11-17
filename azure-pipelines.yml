@@ -44,6 +44,7 @@ steps:
   displayName: 'install dependences'
 
 - script: |
+    pip install robotframework-screencaplibrary
     pip3 install robotframework robotframework-seleniumlibrary
   displayName: 'install dependences'
 
