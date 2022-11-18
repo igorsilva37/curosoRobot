@@ -49,6 +49,9 @@ steps:
   displayName: 'install dependences'
 
 - powershell: |   
-    robot -d resultados -i menus ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot
+    robot -d resultados -i menus ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot & {
+    [CmdletBinding()]param()
+    1,2,3,4 | Select -First 1} -ErrorVariable Problems; $Problems |  Format-List * -Force
+
     pytest
   displayName: 'pytest'
