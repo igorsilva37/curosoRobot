@@ -50,6 +50,6 @@ steps:
   displayName: 'install dependences'
 
 - powershell: |   
-    robot -d resultados -i menus ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot
+    robot -d resultados ./CursoAvancado/argumentos.robot
     pytest
   displayName: 'pytest'
