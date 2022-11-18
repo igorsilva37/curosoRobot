@@ -32,6 +32,9 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
+    pip install yamllint
+    yamllint -d "{extends: relaxed, rules: {line-length: {max: 200}, new-line-at-end-of-file: disable, new-lines: disable}}" .
+    displayName: 'YAML Lint Checks'
   displayName: 'Install dependencies'
 
 - script: |
@@ -49,9 +52,6 @@ steps:
   displayName: 'install dependences'
 
 - powershell: |   
-    robot -d resultados -i menus ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot & {
-    [CmdletBinding()]param()
-    1,2,3,4 | Select -First 1} -ErrorVariable Problems; $Problems |  Format-List * -Force
-
+    robot -d resultados -i menus ./robotFramework/WebTesting/amazon_testes_gherkin_bdd.robot
     pytest
   displayName: 'pytest'
