@@ -50,17 +50,6 @@ steps:
     pip3 install robotframework robotframework-seleniumlibrary
   displayName: 'install dependences'
   
-# Azure PowerShell v1
-# Run a PowerShell script within an Azure environment.
-- task: AzurePowerShell@1
-  inputs:
-    #ConnectedServiceNameSelector: 'ConnectedServiceName' # 'ConnectedServiceName' | 'ConnectedServiceNameARM'. Azure Connection Type. Default: ConnectedServiceName.
-    ConnectedServiceName: # string. Required when ConnectedServiceNameSelector = ConnectedServiceName. Azure Classic Subscription. 
-    #ConnectedServiceNameARM: # string. Required when ConnectedServiceNameSelector = ConnectedServiceNameARM. Azure Subscription. 
-    ScriptType: 'FilePath' # 'FilePath' | 'InlineScript'. Required. Script Type. Default: FilePath.
-    #ScriptPath: # string. Optional. Use when ScriptType = FilePath. Script Path. 
-    #Inline: # string. Optional. Use when ScriptType = InlineScript. Inline Script. 
-    #ScriptArguments: # string. Script Arguments.
     
 - powershell: |   
     robot -d resultados ./CursoAvancado/argumentos.robot
