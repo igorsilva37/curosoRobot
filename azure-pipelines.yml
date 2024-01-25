@@ -50,8 +50,16 @@ steps:
     pip3 install robotframework robotframework-seleniumlibrary
   displayName: 'install dependences'
   
+- script: |
+    python -m pip install --upgrade pip
+    pip install pytest pytest-azurepipelines
+    pip install -e .
+  displayName: 'Install dependencies'
+- script: |
+    python -m pytest tests/
+  displayName: 'pytest'
     
 - powershell: |   
     robot -d resultados ./CursoAvancado/argumentos.robot
-    pytest
+    pip install pytest-azurepipelines
   displayName: 'pytest'
