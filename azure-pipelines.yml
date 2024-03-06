@@ -10,8 +10,8 @@ pool:
   
 strategy:
   matrix:
-    Python37:
-      python.version: '3.7'
+    Python310:
+      python.version: '3.10'
   maxParallel: 1
 
 steps:
@@ -51,10 +51,19 @@ steps:
   displayName: 'install dependences'
   
 - script: |
+    pip install --upgrade pip setuptools
+    pip install --requirement requirements/requirements_tests.txt
+    :: Download models and data files
+    python utils/wl_downloader_ci.py
+  displayName: 'Install dependencies'
+
+- script: |
     python -m pip install --upgrade pip
     pip install pytest pytest-azurepipelines
     pip install -e .
   displayName: 'Install dependencies'
+
+
 - script: |
     python -m pytest tests/
   displayName: 'pytest'
